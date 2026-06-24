@@ -1,0 +1,2 @@
+[console_scripts]
+semantic-trace = semantic_trace.__main__:main

@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: semantic-trace
+Version: 0.1.0
+Summary: Deterministic semantic leak detection demo
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: networkx>=3.0
+
+# Semantic Trace
+
+Semantic Trace is a local, deterministic static-analysis demo that detects when non-production code, variables, configs, or import paths can reach production resources.
+
+## What it checks
+
+- P10: production-named variables holding placeholder or non-production values
+- P11: production URLs in non-production configuration
+- P12: multi-hop import chains from non-production code to production sinks
+- P13: production endpoints assembled dynamically from fragments
+- P14: aliased production identifiers through dictionaries or variable references
+
+## Requirements
+
+- Python 3.10 or newer
+- networkx
+
+## Install
+
+```bash
+pip install -e .
+```
+
+## Run
+
+Scan the demo target:
+
+```bash
+python -m semantic_trace demo_app
+```
+
+Or use the console script after installation:
+
+```bash
+semantic-trace demo_app
+```
+
+JSON-only output:
+
+```bash
+python -m semantic_trace demo_app --json-only
+```
+
+## Repository layout
+
+- `semantic_trace/` core engine
+- `demo_app/` intentionally unsafe fixture app
+- `clean_app/` clean comparison app
+- `semantic_trace/tests/` unit tests
+
+## Demo data
+
+The `demo_app` package intentionally contains planted production-looking URLs and aliases to exercise the policies. The `clean_app` package is the comparison baseline.
+
+## Policy configuration
+
+You can extend the default semantic patterns with a JSON file based on `semantic_trace/policy_config.example.json` and pass it with:
+
+```bash
+python -m semantic_trace demo_app --policy-config path/to/policy.json
+```
