@@ -1,0 +1,15 @@
+{
+  "additional_prod_value_patterns": [
+    "prod\\.",
+    "api\\.prod\\.",
+    "live\\.company\\.com"
+  ],
+  "additional_non_prod_value_patterns": [
+    "localhost",
+    "staging\\."
+  ],
+  "additional_non_prod_path_tokens": [
+    "preview",
+    "qa"
+  ]
+}
