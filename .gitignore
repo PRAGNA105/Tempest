@@ -1,0 +1,8 @@
+tests/
+*.env
+*.key
+*.pem
+*.pyc
+__pycache__/
+*.egg-info/
+.vscode/

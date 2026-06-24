@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leak-detector-agent"
+version = "0.1.0"
+description = "Air-gapped local security engine for detecting secrets, credentials, and PII leaks before commit."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["leak_detector_agent*"]
+
+[tool.pytest.ini_options]
+console_output_style = "classic"
