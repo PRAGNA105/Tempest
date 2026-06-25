@@ -1,0 +1,162 @@
+{
+  "timestamp": 1782363169.0874074,
+  "projects": {
+    "clean_app": [],
+    "test_app": [
+      {
+        "id": "F-da1693ed",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: main.py -> ... -> config/secrets.py",
+        "file": "main.py",
+        "lineno": null
+      },
+      {
+        "id": "F-cbd8c43f",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: services/billing.py -> ... -> config/secrets.py",
+        "file": "services/billing.py",
+        "lineno": null
+      },
+      {
+        "id": "F-9b193503",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: config/endpoints.py -> ... -> config/secrets.py",
+        "file": "config/endpoints.py",
+        "lineno": null
+      },
+      {
+        "id": "F-2b8fe234",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: main.py -> ... -> database/client.py",
+        "file": "main.py",
+        "lineno": null
+      },
+      {
+        "id": "F-1d9af149",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: services/billing.py -> ... -> database/client.py",
+        "file": "services/billing.py",
+        "lineno": null
+      },
+      {
+        "id": "F-f2f91efb",
+        "policy": "P13",
+        "severity": "high",
+        "title": "Dynamically constructed production endpoint: PRODUCTION_CONN_STRING in database/client.py",
+        "file": "database/client.py",
+        "lineno": 12
+      },
+      {
+        "id": "F-06196e2b",
+        "policy": "P13",
+        "severity": "high",
+        "title": "Dynamically constructed production endpoint: FAILOVER_DB in database/client.py",
+        "file": "database/client.py",
+        "lineno": 20
+      },
+      {
+        "id": "F-b15d3c20",
+        "policy": "P14",
+        "severity": "high",
+        "title": "Aliased production identifier: SERVICE_ENDPOINTS['billing'] in config/endpoints.py",
+        "file": "config/endpoints.py",
+        "lineno": 6
+      },
+      {
+        "id": "F-da841c0c",
+        "policy": "P14",
+        "severity": "high",
+        "title": "Aliased production identifier: SERVICE_ENDPOINTS['notifications'] in config/endpoints.py",
+        "file": "config/endpoints.py",
+        "lineno": 6
+      }
+    ],
+    "demo_app": [
+      {
+        "id": "F-cdc41a59",
+        "policy": "P11",
+        "severity": "high",
+        "title": "Production value in non-production file: PROD_DB_URL in config/staging.py",
+        "file": "config/staging.py",
+        "lineno": 11
+      },
+      {
+        "id": "F-12c39300",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: main.py -> ... -> config/staging.py",
+        "file": "main.py",
+        "lineno": null
+      },
+      {
+        "id": "F-f4be6309",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: services/payment.py -> ... -> config/staging.py",
+        "file": "services/payment.py",
+        "lineno": null
+      },
+      {
+        "id": "F-758edbc1",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: config/aliases.py -> ... -> config/staging.py",
+        "file": "config/aliases.py",
+        "lineno": null
+      },
+      {
+        "id": "F-f3f303cf",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: main.py -> ... -> data/db_client.py",
+        "file": "main.py",
+        "lineno": null
+      },
+      {
+        "id": "F-7e9efbc6",
+        "policy": "P12",
+        "severity": "high",
+        "title": "Multi-hop import chain to production sink: services/payment.py -> ... -> data/db_client.py",
+        "file": "services/payment.py",
+        "lineno": null
+      },
+      {
+        "id": "F-59aaf152",
+        "policy": "P13",
+        "severity": "high",
+        "title": "Dynamically constructed production endpoint: conn_str in data/db_client.py",
+        "file": "data/db_client.py",
+        "lineno": 14
+      },
+      {
+        "id": "F-59fe861a",
+        "policy": "P14",
+        "severity": "high",
+        "title": "Aliased production identifier: ENDPOINT_MAP['notify'] in config/aliases.py",
+        "file": "config/aliases.py",
+        "lineno": 10
+      },
+      {
+        "id": "F-26d44441",
+        "policy": "P14",
+        "severity": "high",
+        "title": "Aliased production identifier: ENDPOINT_MAP['payments'] in config/aliases.py",
+        "file": "config/aliases.py",
+        "lineno": 10
+      },
+      {
+        "id": "F-542fe315",
+        "policy": "P10",
+        "severity": "medium",
+        "title": "Production-named variable masks a non-production value: PROD_CACHE_URL in config/staging.py",
+        "file": "config/staging.py",
+        "lineno": 13
+      }
+    ]
+  }
+}
