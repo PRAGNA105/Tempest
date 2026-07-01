@@ -1,8 +1,8 @@
 # Next
 
-Implement deterministic secret scanner foundations in small steps:
+Implement environment discovery in small steps:
 
-1. Add secret pattern definitions for common token/key shapes.
-2. Add entropy helper for high-entropy candidate values.
-3. Implement `SecretScanner`.
-4. Persist secret findings under `state/secret_findings.json`.
+1. Define environment discovery contracts.
+2. Derive environment candidates from URL, database, and cloud findings.
+3. Add confidence and evidence metadata for environment hints.
+4. Add tests and documentation.

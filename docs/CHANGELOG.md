@@ -20,3 +20,11 @@
 - Added a captured Graphify-style fixture and adapter tests.
 - Added scanner base interface, source traversal rules, URL scanner, findings
   persistence, and URL scanner tests.
+- Added deterministic secret scanner with common patterns, entropy scoring,
+  redacted persistence, and tests.
+- Added deterministic database scanner for PostgreSQL, MySQL, MariaDB,
+  MongoDB, Redis, SQL Server, JDBC URLs, and host assignments.
+- Added deterministic cloud resource scanner for AWS, Azure, and GCP resource
+  references.
+- Added database and cloud scanner persistence scripts and tests.
+- Extended traversal to Terraform `.tf` and `.tfvars` files.

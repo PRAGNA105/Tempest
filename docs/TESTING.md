@@ -16,11 +16,13 @@ python -m pytest
 
 Initial tests cover the repository graph contracts, scanner contracts, stub
 adapter, Graphify JSON adapter, RIM builder, and JSON exporter. Scanner
-foundation behavior, URL scanning, and persistence are also covered. Secret,
-database, cloud scanner implementations and leak detection do not exist yet.
+foundation behavior, URL scanning, secret scanning, database scanning, cloud
+resource scanning, persistence, traversal rules, and RIM cloud node mapping are
+covered. Environment discovery, production boundary discovery, graph annotation,
+leak detection, evidence generation, reports, and CLI do not exist yet.
 
 ## Latest Local Run
 
-- `python -m pytest`: 14 passed.
+- `python -m pytest`: 32 passed.
 - `python -m ruff check .`: not run successfully because `ruff` is not
   installed in the active Python environment.

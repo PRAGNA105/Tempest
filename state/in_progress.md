@@ -1,3 +1,3 @@
 # In Progress
 
-- No active task.
+- No active task. Database and cloud scanner milestone is complete.

@@ -10,6 +10,9 @@
 - Scanner base interface.
 - Deterministic source file traversal rules.
 - URL scanner.
+- Secret scanner.
+- Database scanner.
+- Cloud resource scanner.
 - Scanner findings JSON persistence.
 - RIM node, edge, and model contracts.
 - RIM JSON exporter.
@@ -26,7 +29,15 @@
 - Scanner findings can be represented with pydantic models.
 - URL findings can be detected from text files with line, column, hostname,
   confidence, and environment hint metadata.
+- Secret findings can be detected from text files with redacted evidence,
+  entropy, fingerprint metadata, and confidence.
+- Database findings can be detected for PostgreSQL, MySQL, MariaDB, MongoDB,
+  Redis, SQL Server, JDBC URLs, and database host assignments.
+- Cloud resource findings can be detected for AWS, Azure, and GCP resource
+  references.
 - Scanner findings can be persisted under `state/`.
+- Database findings are persisted under `state/database_findings.json`.
+- Cloud resource findings are persisted under `state/cloud_findings.json`.
 - A RIM can be built from graph nodes, graph edges, and scanner findings.
 - A RIM can be exported as JSON.
 - Tests pass with `python -m pytest`.
@@ -34,7 +45,6 @@
 ## What Is Incomplete
 
 - Invoking the Graphify CLI directly.
-- Secret, database, and cloud resource scanner implementations.
 - Environment discovery.
 - Production boundary discovery.
 - Graph annotation.
@@ -45,4 +55,3 @@
 ## Blockers
 
 - `ruff` is not installed in the active Python environment.
-- The directory is not currently a Git repository, so no commit was created.

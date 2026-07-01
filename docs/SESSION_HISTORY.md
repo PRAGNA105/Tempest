@@ -21,11 +21,19 @@ Completed tasks:
 - Implemented the Graphify JSON adapter against a captured node-link fixture.
 - Implemented deterministic scanner foundations.
 - Implemented URL scanning and persisted URL findings under `state/`.
-- Ran tests successfully: 14 passed.
+- Implemented secret scanning and persisted redacted secret findings under
+  `state/`.
+- Implemented deterministic database scanning for supported database URLs, JDBC
+  URLs, and host assignments.
+- Persisted database findings under `state/database_findings.json`.
+- Implemented deterministic cloud resource scanning for AWS, Azure, and GCP
+  references.
+- Persisted cloud resource findings under `state/cloud_findings.json`.
+- Ran tests successfully: 32 passed.
 
 Notes:
 
 - The active `python` command is Python 3.10.11, although the project declares
   Python 3.12+ as the target.
 - `ruff` is not installed in the active Python environment.
-- The working directory is not currently a Git repository.
+- Next recommended task is environment discovery.

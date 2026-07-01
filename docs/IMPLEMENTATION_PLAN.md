@@ -2,15 +2,14 @@
 
 ## Current Sprint
 
-Bootstrap the repository foundation:
+Complete deterministic scanner coverage for the MVP foundation:
 
-- Create project structure.
-- Define graph contracts.
-- Define Graphify adapter boundary.
-- Define scanner contracts.
-- Define RIM contracts.
-- Export `rim.json`.
-- Add tests and documentation.
+- URL scanner complete.
+- Secret scanner complete.
+- Database scanner complete.
+- Cloud resource scanner complete.
+- Scanner findings persistence complete.
+- Tests and documentation updated.
 
 ## MVP Roadmap
 
@@ -19,8 +18,8 @@ Bootstrap the repository foundation:
 3. Scanner contracts.
 4. RIM contracts.
 5. RIM JSON export.
-6. Deterministic scanners. URL scanner foundation is complete; secret,
-   database, and cloud scanners remain.
+6. Deterministic scanners. URL, secret, database, and cloud scanner
+   foundations are complete.
 7. Environment discovery.
 8. Production boundary discovery.
 9. Graph annotation.
@@ -32,8 +31,6 @@ Bootstrap the repository foundation:
 
 - Optional Graphify CLI invocation wrapper.
 - JSON state persistence for every stage.
-- Secret scanner implementation.
-- Database and cloud resource scanners.
 - RIM validation CLI.
 - Leak detection traversal and policies.
 - Markdown and JSON reports.
