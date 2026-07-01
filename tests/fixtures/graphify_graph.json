@@ -1,0 +1,66 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "pipeline-group",
+        "nodes": ["file:api.py", "function:api.handle_request", "function:storage.save_document"],
+        "relation": "pipeline"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "file:api.py",
+      "label": "api.py",
+      "file_type": "code",
+      "kind": "file",
+      "source_file": "api.py",
+      "community": 1
+    },
+    {
+      "id": "function:api.handle_request",
+      "label": "handle_request",
+      "file_type": "code",
+      "kind": "function",
+      "source_file": "api.py",
+      "source_location": {
+        "line": 10,
+        "column": 1
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "function:storage.save_document",
+      "label": "save_document",
+      "file_type": "code",
+      "kind": "function",
+      "source_file": "storage.py",
+      "source_location": {
+        "line": 5,
+        "column": 1
+      },
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "file:api.py",
+      "target": "function:api.handle_request",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "api.py",
+      "key": "defines:api.py:L10"
+    },
+    {
+      "source": "function:api.handle_request",
+      "target": "function:storage.save_document",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "api.py",
+      "key": "calls:api.py:L18"
+    }
+  ]
+}
