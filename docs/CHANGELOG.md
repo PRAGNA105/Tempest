@@ -1,5 +1,54 @@
 # Changelog
 
+## 2026-07-02 (Session 6)
+
+### Added
+
+- Added report contracts for summaries, report findings, and security reports.
+- Added deterministic report generation from evidence records.
+- Added Markdown report rendering.
+- Added report JSON and Markdown persistence.
+- Added report specification documentation.
+- Added report generation tests (5 new tests).
+
+## 2026-07-02 (Session 5)
+
+### Added
+
+- Added evidence generation contracts for evidence records, evidence nodes, and
+  evidence facts.
+- Added deterministic evidence generation from leak findings and RIM nodes.
+- Added evidence JSON persistence.
+- Added evidence specification documentation.
+- Added evidence generation tests (5 new tests).
+
+## 2026-07-02 (Session 4)
+
+### Added
+
+- Added leak detection contracts for severity, leak findings, and detection
+  results.
+- Added detection policy interface.
+- Added production secret boundary policy for secrets colocated with externally
+  reachable production boundaries in annotated RIM data.
+- Added leak finding JSON persistence.
+- Added detection specification documentation.
+- Added leak detection tests (5 new tests).
+
+## 2026-07-02 (Session 3)
+
+### Added
+
+- Added graph annotation contracts for annotation type and annotated node
+  metadata.
+- Added RIM annotation that creates environment and production boundary nodes.
+- Added `belongs_to_environment` and `crosses_boundary` RIM edges from source
+  nodes to annotation nodes.
+- Added source node annotation metadata enrichment with file-node resolution and
+  finding-node fallback.
+- Added graph annotation tests (5 new tests).
+- Added the missing `docs/HANDOFF.md` handoff source.
+
 ## 2026-07-02 (Session 2)
 
 ### Added

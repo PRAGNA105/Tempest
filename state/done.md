@@ -32,3 +32,31 @@
 - Generated `state/boundary_candidates.json`.
 - Added boundary discovery tests.
 - Verified test suite with `python -m pytest`: 48 passed.
+- Added graph annotation contracts.
+- Added RIM graph annotation for environment and production boundary candidates.
+- Added environment and production boundary annotation nodes.
+- Added `belongs_to_environment` and `crosses_boundary` annotation edges.
+- Added source node annotation metadata enrichment.
+- Added annotation tests.
+- Created `docs/HANDOFF.md`.
+- Verified test suite with `python -m pytest`: 53 passed.
+- Added leak detection contracts.
+- Added detection policy interface.
+- Added production secret boundary policy.
+- Added leak finding JSON persistence.
+- Added detection specification documentation.
+- Added detection tests.
+- Verified test suite with `python -m pytest`: 58 passed.
+- Added evidence generation contracts.
+- Added deterministic evidence generation.
+- Added evidence JSON persistence.
+- Added evidence specification documentation.
+- Added evidence tests.
+- Verified test suite with `python -m pytest`: 63 passed.
+- Added report generation contracts.
+- Added deterministic report generation.
+- Added Markdown report rendering.
+- Added report JSON and Markdown persistence.
+- Added report specification documentation.
+- Added report tests.
+- Verified test suite with `python -m pytest`: 68 passed.

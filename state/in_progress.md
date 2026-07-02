@@ -1,3 +1,3 @@
 # In Progress
 
-- No active task. Production boundary discovery milestone is complete.
+- No active task. Report generation milestone is complete.

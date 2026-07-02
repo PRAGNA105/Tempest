@@ -1,5 +1,102 @@
 # Session History
 
+## 2026-07-02 (Session 6)
+
+Completed report generation.
+
+Completed tasks:
+
+- Added report summary, report finding, and security report contracts.
+- Added deterministic report generation from evidence records.
+- Added severity counts and deterministic severity/source/evidence sorting.
+- Added Markdown rendering for report output.
+- Added report JSON and Markdown persistence.
+- Added report specification documentation.
+- Added 5 tests covering contracts, summaries, sorting, Markdown rendering,
+  empty reports, and persistence.
+- Ran tests successfully: 68 passed.
+- Ran targeted Ruff successfully for `src\reports` and
+  `tests\test_reports.py`.
+
+Next recommended task:
+
+- CLI orchestration.
+
+## 2026-07-02 (Session 5)
+
+Completed evidence generation.
+
+Completed tasks:
+
+- Added evidence record, evidence node, and evidence fact contracts.
+- Added deterministic evidence generation from leak findings and RIM nodes.
+- Preserved source location, severity, confidence, summary, primary node, and
+  related node snapshots in evidence records.
+- Added deterministic facts from leak finding metadata and RIM nodes.
+- Recorded missing related node IDs without failing generation.
+- Added evidence JSON persistence.
+- Added evidence specification documentation.
+- Added 5 tests covering contracts, generation, deterministic facts,
+  deterministic IDs, missing nodes, and JSON persistence.
+- Ran tests successfully: 63 passed.
+- Ran targeted Ruff successfully for `src\evidence` and
+  `tests\test_evidence.py`.
+
+Next recommended task:
+
+- Report generation.
+
+## 2026-07-02 (Session 4)
+
+Completed leak detection policies.
+
+Completed tasks:
+
+- Added leak detection contracts.
+- Added detection policy interface.
+- Added the first deterministic policy:
+  `production_secret_boundary`.
+- Detected secrets in source files that cross externally reachable production
+  boundaries using annotated RIM data.
+- Added deterministic leak finding IDs, severity, confidence, evidence text,
+  related RIM nodes, and policy metadata.
+- Added JSON persistence for leak findings.
+- Added detection specification documentation.
+- Added 5 tests covering contracts, detection, internal-boundary exclusion,
+  deterministic IDs, and JSON persistence.
+- Ran tests successfully: 58 passed.
+- Ran targeted Ruff successfully for `src\detection` and
+  `tests\test_detection.py`.
+
+Next recommended task:
+
+- Evidence generation.
+
+## 2026-07-02 (Session 3)
+
+Completed graph annotation.
+
+Completed tasks:
+
+- Added graph annotation contracts.
+- Added RIM annotation for environment and production boundary candidates.
+- Created environment and production boundary RIM nodes from candidate models.
+- Linked source file nodes to annotation nodes with `belongs_to_environment`
+  and `crosses_boundary` edges.
+- Added fallback linking to finding nodes when no matching source file node
+  exists.
+- Added structured annotation metadata to source RIM nodes.
+- Added 5 tests covering contracts, environment annotation, boundary
+  annotation, fallback behavior, and idempotency.
+- Created the missing `docs/HANDOFF.md` primary source.
+- Ran tests successfully: 53 passed.
+- Ran targeted Ruff successfully for `src\annotation` and
+  `tests\test_annotation.py`.
+
+Next recommended task:
+
+- Leak detection policies.
+
 ## 2026-07-02 (Session 2)
 
 Completed production boundary discovery.

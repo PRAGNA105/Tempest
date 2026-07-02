@@ -55,3 +55,12 @@ Fields:
 - `confidence`: confidence from `0.0` to `1.0`.
 - `metadata`: relationship-specific details.
 
+## Annotation Metadata
+
+Graph annotation adds `environment` and `production_boundary` RIM nodes from
+candidate models. It links source file nodes, or finding nodes when no file node
+exists, with `belongs_to_environment` and `crosses_boundary` edges.
+
+Annotated source nodes receive `metadata.annotations`, a list of structured
+annotation records containing the target node, annotation type, source
+candidate, source finding, confidence, and location metadata.

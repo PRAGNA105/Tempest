@@ -17,6 +17,8 @@ Repository
   -> Repository Graph
   -> Content Scanner
   -> Environment Discovery
+  -> Production Boundary Discovery
+  -> Graph Annotation
   -> RIM Export
 ```
 
@@ -47,12 +49,15 @@ Repository
   resources.
 - `environment`: deterministic environment candidate discovery from scanner
   findings.
-- `boundary`: future production boundary discovery.
-- `annotation`: future graph enrichment layer.
+- `boundary`: production boundary discovery.
+- `annotation`: graph enrichment layer that adds environment and production
+  boundary annotation nodes, metadata, and RIM edges.
 - `rim`: canonical RIM models and JSON export.
-- `detection`: future leak detection engine.
-- `evidence`: future evidence generation.
-- `reports`: future report generation.
+- `detection`: deterministic leak detection contracts and policies that consume
+  the RIM.
+- `evidence`: deterministic evidence records generated from leak findings and
+  RIM nodes.
+- `reports`: deterministic report generation from evidence records.
 
 ## Contracts
 
@@ -63,8 +68,12 @@ Every stage exposes explicit inputs and outputs:
 | Graphify Adapter | Repository path | `RepositoryGraph` |
 | Content Scanner | Repository files | Scanner findings |
 | Environment Discovery | Scanner findings | Environment candidates |
-| RIM Export | `RepositoryGraph` plus findings | `rim.json` |
-| Leak Detection | RIM | Findings and evidence |
+| Production Boundary Discovery | Environment candidates plus scanner findings | Production boundary candidates |
+| Graph Annotation | RIM plus environment and boundary candidates | Annotated RIM |
+| RIM Export | Annotated RIM | `rim.json` |
+| Leak Detection | Annotated RIM | Leak findings |
+| Evidence Generation | RIM plus leak findings | Evidence records |
+| Report Generation | Evidence records | Markdown and JSON reports |
 
 ## Graphify JSON Boundary
 

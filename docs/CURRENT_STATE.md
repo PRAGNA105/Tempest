@@ -15,6 +15,14 @@
 - Cloud resource scanner.
 - Environment discovery.
 - Production boundary discovery.
+- Graph annotation contracts.
+- RIM graph annotation for environment and production boundary candidates.
+- Leak detection contracts.
+- First deterministic leak detection policy.
+- Evidence generation contracts.
+- Deterministic evidence generation.
+- Report generation contracts.
+- Deterministic report generation.
 - Scanner findings JSON persistence.
 - RIM node, edge, and model contracts.
 - RIM JSON exporter.
@@ -48,18 +56,33 @@
 - Environment candidates are persisted under `state/environment_candidates.json`.
 - Boundary candidates are persisted under `state/boundary_candidates.json`.
 - A RIM can be built from graph nodes, graph edges, and scanner findings.
+- A RIM can be annotated with environment and production boundary nodes.
+- Environment candidates are linked to source RIM nodes with
+  `belongs_to_environment` edges.
+- Boundary candidates are linked to source RIM nodes with `crosses_boundary`
+  edges.
+- Source RIM nodes receive structured annotation metadata.
+- Leak findings can be represented with pydantic models.
+- Leak findings can be persisted as JSON.
+- The production secret boundary policy detects secrets in files that cross
+  externally reachable production boundaries.
+- Evidence records can be generated from leak findings and RIM nodes.
+- Evidence records snapshot primary and related RIM nodes.
+- Evidence records include deterministic facts from leak finding metadata.
+- Evidence records can be persisted as JSON.
+- Structured reports can be generated from evidence records.
+- Reports include severity summaries and report-ready finding rows.
+- Reports can be rendered as deterministic Markdown.
+- Reports can be persisted as JSON and Markdown.
 - A RIM can be exported as JSON.
-- Tests pass with `python -m pytest`: 48 passed.
+- Tests pass with `python -m pytest`: 68 passed.
 
 ## What Is Incomplete
 
 - Invoking the Graphify CLI directly.
-- Graph annotation.
-- Leak detection.
-- Evidence generation.
-- Reports and CLI.
+- CLI.
 
 ## Blockers
 
-- Full-repo `python -m ruff check .` reports existing lint findings outside the
-  environment discovery files.
+- Full-repo `python -m ruff check .` has documented existing lint findings
+  outside the latest report files.

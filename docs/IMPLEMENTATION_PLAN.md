@@ -10,6 +10,10 @@ Complete deterministic repository intelligence foundations:
 - Cloud resource scanner complete.
 - Environment discovery complete.
 - Production boundary discovery complete.
+- Graph annotation complete.
+- Leak detection policies complete.
+- Evidence generation complete.
+- Report generation complete.
 - Scanner findings persistence complete.
 - Tests and documentation updated.
 
@@ -24,10 +28,11 @@ Complete deterministic repository intelligence foundations:
    foundations are complete.
 7. Environment discovery.
 8. Production boundary discovery. Complete.
-9. Graph annotation. Current next task.
-10. Leak detection policies.
-11. Evidence generation.
-12. Reports and CLI.
+9. Graph annotation. Complete.
+10. Leak detection policies. Complete.
+11. Evidence generation. Complete.
+12. Reports. Complete.
+13. CLI. Current next task.
 
 ## Future Sprints
 
@@ -35,7 +40,7 @@ Complete deterministic repository intelligence foundations:
 - JSON state persistence for every stage.
 - RIM validation CLI.
 - Leak detection traversal and policies.
-- Markdown and JSON reports.
+- CLI orchestration.
 
 ## Backlog
 
