@@ -45,7 +45,8 @@ Repository
 - `graphify_adapter`: boundary for converting Graphify output into
   `RepositoryGraph`. The current implementation loads Graphify's
   NetworkX node-link `graphify-out/graph.json` format through
-  `GraphifyJsonAdapter`.
+  `GraphifyJsonAdapter`. Optional CLI invocation is isolated in
+  `run_graphify_cli` and still hands off through the JSON boundary.
 - `scanners`: finding contracts for secrets, URLs, databases, and cloud
   resources.
 - `environment`: deterministic environment candidate discovery from scanner
@@ -68,6 +69,7 @@ Every stage exposes explicit inputs and outputs:
 
 | Stage | Input | Output |
 | --- | --- | --- |
+| Optional Graphify CLI Invocation | Repository path plus command template | `graphify-out/graph.json` |
 | Graphify Adapter | Repository path | `RepositoryGraph` |
 | Content Scanner | Repository files | Scanner findings |
 | Environment Discovery | Scanner findings | Environment candidates |
@@ -100,6 +102,24 @@ confidence tags are converted to numeric confidence:
 - `EXTRACTED`: `1.0`
 - `INFERRED`: `confidence_score` when present, otherwise `0.75`
 - `AMBIGUOUS`: `0.5`
+
+## Optional Graphify CLI Invocation
+
+`rilde run` can run a user-supplied command before loading Graphify JSON:
+
+```text
+--graphify-command <command> [args...]
+```
+
+The command is executed without a shell and supports these tokens:
+
+- `{repository}`
+- `{graph_json}`
+- `{graphify_output_dir}`
+
+The wrapper validates that the expected Graphify JSON exists after the command
+completes. It does not change the RILDE graph contract; the JSON adapter remains
+the only ingestion boundary.
 
 ## Non-Goals For MVP
 

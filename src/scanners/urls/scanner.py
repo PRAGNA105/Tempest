@@ -24,7 +24,7 @@ class URLScanner(Scanner):
         findings: list[URLFinding] = []
         for source_file in iter_source_files(repository_path, self.traversal_rules):
             for match in URL_PATTERN.finditer(source_file.text):
-                raw_url = match.group(0).rstrip(TRAILING_PUNCTUATION)
+                raw_url = _normalize_url_match(match.group(0))
                 parsed = urlparse(raw_url)
                 if not parsed.scheme or not parsed.netloc:
                     continue
@@ -54,6 +54,11 @@ def _line_column(text: str, offset: int) -> tuple[int, int]:
     line_start = text.rfind("\n", 0, offset)
     column = offset + 1 if line_start == -1 else offset - line_start
     return line, column
+
+
+def _normalize_url_match(raw_url: str) -> str:
+    cleaned = raw_url.split("](", 1)[0]
+    return cleaned.rstrip(TRAILING_PUNCTUATION)
 
 
 def _finding_id(source_file: str, line: int, column: int, url: str) -> str:

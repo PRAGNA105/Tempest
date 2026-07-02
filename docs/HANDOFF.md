@@ -10,7 +10,7 @@ CLI.
 
 ## Last Completed Task
 
-CLI orchestration.
+Optional Graphify CLI invocation wrapper.
 
 ## Current Task
 
@@ -18,7 +18,7 @@ No active task.
 
 ## Next Task
 
-Optional Graphify CLI invocation wrapper.
+RIM validation CLI.
 
 ## Blockers
 
@@ -27,7 +27,7 @@ Optional Graphify CLI invocation wrapper.
 
 ## Test Status
 
-Pass. `python -m pytest`: 71 passed.
+Pass. `python -m pytest`: 75 passed.
 
 ## Architecture Snapshot
 
@@ -38,7 +38,8 @@ Major modules:
 
 - `graph`: language-agnostic repository graph contracts.
 - `graphify_adapter`: loads Graphify NetworkX node-link JSON into graph
-  contracts.
+  contracts and can optionally invoke a user-supplied Graphify CLI command
+  before JSON loading.
 - `scanners`: URL, secret, database, and cloud resource finding contracts and
   deterministic scanners.
 - `environment`: derives environment candidates from scanner findings.
@@ -74,6 +75,8 @@ Repository
 Contracts:
 
 - Graphify output is normalized to `RepositoryGraph`.
+- Optional Graphify CLI invocation produces Graphify JSON before the adapter
+  boundary; it does not alter the RIM contract.
 - Scanner output is represented as typed `Finding` models.
 - Environment and boundary discovery output candidate models.
 - Annotation consumes a RIM plus candidates and returns an enriched RIM.
@@ -96,13 +99,12 @@ Contracts:
 
 - Python target is 3.12+, but local test output currently shows Python 3.10.11.
 - Full-repo Ruff has existing findings outside the latest report work.
-- Graphify CLI invocation is still optional future work; current Graphify
-  integration reads existing JSON output.
+- RIM validation CLI is not implemented.
 
 ## Immediate Next Action
 
 The next engineer should start by executing:
 
 ```text
-Optional Graphify CLI invocation wrapper.
+RIM validation CLI.
 ```

@@ -8,7 +8,7 @@ from boundary import ProductionBoundaryDiscovery, save_boundary_candidates_json
 from detection import ProductionSecretBoundaryPolicy, save_leak_findings_json
 from environment import EnvironmentDiscovery, save_environment_candidates_json
 from evidence import generate_evidence, save_evidence_json
-from graphify_adapter import GraphifyJsonAdapter
+from graphify_adapter import GraphifyJsonAdapter, run_graphify_cli
 from reports import generate_report, save_report_json, save_report_markdown
 from rim import build_rim, export_rim_json
 from scanners import (
@@ -32,6 +32,7 @@ def run_deterministic_pipeline(
     *,
     output_dir: Path = Path("state"),
     graph_json: Path | None = None,
+    graphify_command: list[str] | None = None,
 ) -> PipelineResult:
     repository = repository_path.resolve()
     if not repository.exists():
@@ -41,6 +42,9 @@ def run_deterministic_pipeline(
 
     output_root = output_dir
     output_root.mkdir(parents=True, exist_ok=True)
+
+    if graphify_command is not None:
+        run_graphify_cli(repository, graphify_command, graph_json=graph_json)
 
     graph = GraphifyJsonAdapter(graph_json).build_graph(repository)
 

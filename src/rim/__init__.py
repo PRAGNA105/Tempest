@@ -13,6 +13,13 @@ from rim.models import (
     SecretNode,
     URLNode,
 )
+from rim.validation import (
+    RimValidationIssue,
+    RimValidationResult,
+    RimValidationSeverity,
+    validate_rim,
+    validate_rim_json,
+)
 
 __all__ = [
     "ClassNode",
@@ -25,9 +32,13 @@ __all__ = [
     "RepositoryIntelligenceModel",
     "RepositoryNode",
     "RIMEdge",
+    "RimValidationIssue",
+    "RimValidationResult",
+    "RimValidationSeverity",
     "SecretNode",
     "URLNode",
     "build_rim",
     "export_rim_json",
+    "validate_rim",
+    "validate_rim_json",
 ]
-

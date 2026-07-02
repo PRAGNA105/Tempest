@@ -16,7 +16,23 @@ Complete deterministic repository intelligence foundations:
 - Report generation complete.
 - Scanner findings persistence complete.
 - CLI orchestration complete.
+- Optional Graphify CLI invocation wrapper complete.
 - Tests and documentation updated.
+- Automatic Graphify acquisition when `graph.json` is absent.
+
+Plan for automatic Graphify support:
+
+1. Define the default Graphify acquisition behavior for `rilde run` when no
+   `--graph-json` is supplied.
+2. Add a discovery and execution path that can invoke Graphify with sensible
+   defaults, generate `graphify-out/graph.json`, and reuse the existing JSON
+   adapter boundary.
+3. Keep the explicit `--graphify-command` escape hatch for custom workflows
+   and CI environments.
+4. Update the CLI help, README, and docs so users can run the project without
+   pre-creating `graph.json`.
+5. Add tests for the automatic path, missing Graphify installation, and
+   fallback/error messages.
 
 ## MVP Roadmap
 
@@ -34,13 +50,14 @@ Complete deterministic repository intelligence foundations:
 11. Evidence generation. Complete.
 12. Reports. Complete.
 13. CLI. Complete.
+14. Automatic Graphify acquisition.
 
 ## Future Sprints
 
-- Optional Graphify CLI invocation wrapper.
 - JSON state persistence for every stage.
 - RIM validation CLI.
 - Leak detection traversal and policies.
+- Graphify auto-discovery and default execution hardening.
 
 ## Backlog
 

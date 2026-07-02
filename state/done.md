@@ -67,3 +67,10 @@
   and report Markdown.
 - Added CLI orchestration tests.
 - Verified test suite with `python -m pytest`: 71 passed.
+- Added optional Graphify CLI invocation wrapper.
+- Added command token rendering for `{repository}`, `{graph_json}`, and
+  `{graphify_output_dir}`.
+- Wired `rilde run --graphify-command ...` into deterministic pipeline
+  orchestration.
+- Added Graphify CLI wrapper and invocation tests.
+- Verified test suite with `python -m pytest`: 75 passed.

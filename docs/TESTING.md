@@ -20,11 +20,14 @@ foundation behavior, URL scanning, secret scanning, database scanning, cloud
 resource scanning, environment discovery, persistence, traversal rules, RIM
 cloud node mapping, production boundary discovery, graph annotation, leak
 detection policies, evidence generation, report generation, and CLI
-orchestration are covered.
+orchestration are covered. Optional Graphify CLI invocation is covered with a
+fake command that writes Graphify-compatible JSON.
 
 ## Latest Local Run
 
-- `python -m pytest`: 71 passed.
+- `python -m pytest`: 75 passed.
+- `python -m ruff check src\graphify_adapter\cli.py src\graphify_adapter\__init__.py src\rilde_cli tests\test_graphify_json_adapter.py tests\test_cli.py`:
+  passed.
 - `python -m ruff check src\rilde_cli tests\test_cli.py`: passed.
 - `python -m ruff check src\reports tests\test_reports.py`: passed.
 - `python -m ruff check src\evidence tests\test_evidence.py`: passed.

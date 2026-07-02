@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-02 (Session 8)
+
+### Added
+
+- Added optional Graphify CLI invocation wrapper with command token rendering.
+- Added `rilde run --graphify-command ...` integration before Graphify JSON
+  loading.
+- Added Graphify CLI wrapper tests and pipeline/CLI invocation tests (4 new
+  tests).
+
 ## 2026-07-02 (Session 7)
 
 ### Added

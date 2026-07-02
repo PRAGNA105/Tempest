@@ -1,5 +1,28 @@
 # Session History
 
+## 2026-07-02 (Session 8)
+
+Completed optional Graphify CLI invocation wrapper.
+
+Completed tasks:
+
+- Added `run_graphify_cli` and Graphify CLI result/error contracts.
+- Added command token rendering for `{repository}`, `{graph_json}`, and
+  `{graphify_output_dir}`.
+- Added subprocess execution without a shell, nonzero exit handling, timeout
+  handling, and expected graph JSON validation.
+- Wired `rilde run --graphify-command ...` into the deterministic pipeline
+  before Graphify JSON loading.
+- Added 4 tests covering wrapper success, wrapper failure, pipeline invocation,
+  and CLI invocation.
+- Ran tests successfully: 75 passed.
+- Ran targeted Ruff successfully for the new Graphify CLI wrapper, CLI package,
+  and touched tests.
+
+Next recommended task:
+
+- RIM validation CLI.
+
 ## 2026-07-02 (Session 7)
 
 Completed CLI orchestration.

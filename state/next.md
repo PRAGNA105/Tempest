@@ -1,3 +1,3 @@
 # Next
 
-Optional Graphify CLI invocation wrapper.
+Automatic Graphify acquisition when `graph.json` is missing.

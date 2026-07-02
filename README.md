@@ -17,5 +17,11 @@ Run the deterministic pipeline with:
 rilde run <repository> --graph-json <repository>/graphify-out/graph.json --output-dir state
 ```
 
-Graphify CLI invocation is still optional future work; the current pipeline
-expects Graphify JSON to already exist.
+To invoke a Graphify-compatible command first, pass the command last:
+
+```bash
+rilde run <repository> --graph-json <repository>/graphify-out/graph.json --output-dir state --graphify-command graphify "{repository}" --output "{graphify_output_dir}"
+```
+
+The Graphify command syntax is user-supplied; RILDE only runs it, validates the
+expected JSON exists, and then loads that JSON through the adapter boundary.

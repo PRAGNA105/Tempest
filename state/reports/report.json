@@ -1,0 +1,15 @@
+{
+  "findings": [],
+  "metadata": {
+    "generator": "deterministic_report_generator"
+  },
+  "schema_version": "0.1",
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "low": 0,
+    "medium": 0,
+    "total_findings": 0
+  },
+  "title": "RILDE Security Report"
+}

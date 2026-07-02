@@ -1,3 +1,3 @@
 # In Progress
 
-- No active task. CLI orchestration is complete.
+- Automatic Graphify acquisition when `graph.json` is missing.

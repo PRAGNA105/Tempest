@@ -66,6 +66,20 @@ def test_url_scanner_stops_before_escaped_newline_in_source_literals(tmp_path):
     assert findings[0].hostname == "ignored.example.com"
 
 
+def test_url_scanner_handles_markdown_links_without_merging_urls(tmp_path):
+    (tmp_path / "README.md").write_text(
+        "Open [http://localhost:3000](http://localhost:3000) to view it.\n",
+        encoding="utf-8",
+    )
+
+    findings = URLScanner().scan(tmp_path)
+
+    assert len(findings) == 1
+    assert findings[0].url == "http://localhost:3000"
+    assert findings[0].hostname == "localhost"
+    assert findings[0].confidence == 0.7
+
+
 def test_save_findings_json_persists_scanner_output(tmp_path):
     (tmp_path / "config.env").write_text("PUBLIC_URL=https://staging.example.com\n", encoding="utf-8")
     findings = URLScanner().scan(tmp_path)

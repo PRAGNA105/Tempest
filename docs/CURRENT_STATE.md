@@ -6,6 +6,7 @@
 - Core graph contracts.
 - Stub Graphify adapter.
 - Graphify JSON adapter for `graphify-out/graph.json`.
+- Optional Graphify CLI invocation wrapper.
 - Scanner finding contracts.
 - Scanner base interface.
 - Deterministic source file traversal rules.
@@ -37,6 +38,10 @@
 - The Graphify JSON adapter can load a captured NetworkX node-link fixture.
 - The Graphify JSON adapter preserves node/edge metadata and maps confidence
   tags into numeric confidence values.
+- The optional Graphify CLI wrapper can run a user-supplied command template
+  before the deterministic pipeline reads Graphify JSON.
+- `rilde run --graphify-command ...` can invoke Graphify-compatible commands
+  with `{repository}`, `{graph_json}`, and `{graphify_output_dir}` tokens.
 - Scanner findings can be represented with pydantic models.
 - URL findings can be detected from text files with line, column, hostname,
   confidence, and environment hint metadata.
@@ -80,13 +85,17 @@
   runs leak detection, generates evidence, and writes JSON and Markdown report
   artifacts.
 - A RIM can be exported as JSON.
-- Tests pass with `python -m pytest`: 71 passed.
+- Tests pass with `python -m pytest`: 75 passed.
 
 ## What Is Incomplete
 
-- Invoking the Graphify CLI directly.
+- RIM validation CLI.
+- Automatic Graphify acquisition when `graph.json` is missing.
 
 ## Blockers
 
 - Full-repo `python -m ruff check .` has documented existing lint findings
   outside the latest report files.
+- The CLI still expects Graphify output to exist or be produced via an
+  explicit `--graphify-command`; there is no built-in auto-discovery or
+  default Graphify execution path yet.
