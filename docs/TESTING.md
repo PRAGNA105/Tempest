@@ -18,13 +18,14 @@ Initial tests cover the repository graph contracts, scanner contracts, stub
 adapter, Graphify JSON adapter, RIM builder, and JSON exporter. Scanner
 foundation behavior, URL scanning, secret scanning, database scanning, cloud
 resource scanning, environment discovery, persistence, traversal rules, RIM
-cloud node mapping, production boundary discovery, graph annotation, and leak
-detection policies, evidence generation, and report generation are covered. CLI
-does not exist yet.
+cloud node mapping, production boundary discovery, graph annotation, leak
+detection policies, evidence generation, report generation, and CLI
+orchestration are covered.
 
 ## Latest Local Run
 
-- `python -m pytest`: 68 passed.
+- `python -m pytest`: 71 passed.
+- `python -m ruff check src\rilde_cli tests\test_cli.py`: passed.
 - `python -m ruff check src\reports tests\test_reports.py`: passed.
 - `python -m ruff check src\evidence tests\test_evidence.py`: passed.
 - `python -m ruff check src\detection tests\test_detection.py`: passed.

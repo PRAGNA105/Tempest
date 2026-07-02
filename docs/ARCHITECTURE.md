@@ -36,6 +36,7 @@ Repository
   -> Leak Detection Engine
   -> Evidence Generation
   -> Reports
+  -> CLI Artifacts
 ```
 
 ## Module Relationships
@@ -58,6 +59,8 @@ Repository
 - `evidence`: deterministic evidence records generated from leak findings and
   RIM nodes.
 - `reports`: deterministic report generation from evidence records.
+- `rilde_cli`: deterministic command-line orchestration over existing pipeline
+  stages.
 
 ## Contracts
 
@@ -74,6 +77,7 @@ Every stage exposes explicit inputs and outputs:
 | Leak Detection | Annotated RIM | Leak findings |
 | Evidence Generation | RIM plus leak findings | Evidence records |
 | Report Generation | Evidence records | Markdown and JSON reports |
+| CLI Orchestration | Repository path plus Graphify JSON | Persisted stage artifacts |
 
 ## Graphify JSON Boundary
 

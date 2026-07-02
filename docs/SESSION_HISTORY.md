@@ -1,5 +1,26 @@
 # Session History
 
+## 2026-07-02 (Session 7)
+
+Completed CLI orchestration.
+
+Completed tasks:
+
+- Added `rilde` console script entry point.
+- Added `rilde run` command for the deterministic pipeline.
+- Added reusable pipeline orchestration in `src/rilde_cli`.
+- Persisted URL, secret, database, cloud, environment, boundary, RIM, leak,
+  evidence, report JSON, and report Markdown artifacts under the configured
+  output directory.
+- Added 3 tests covering pipeline artifact generation, CLI summary output, and
+  missing Graphify JSON errors.
+- Ran tests successfully: 71 passed.
+- Ran targeted Ruff successfully for `src\rilde_cli` and `tests\test_cli.py`.
+
+Next recommended task:
+
+- Optional Graphify CLI invocation wrapper.
+
 ## 2026-07-02 (Session 6)
 
 Completed report generation.

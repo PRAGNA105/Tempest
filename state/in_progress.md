@@ -1,3 +1,3 @@
 # In Progress
 
-- No active task. Report generation milestone is complete.
+- No active task. CLI orchestration is complete.

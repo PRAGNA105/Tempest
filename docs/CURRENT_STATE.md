@@ -24,6 +24,7 @@
 - Report generation contracts.
 - Deterministic report generation.
 - Scanner findings JSON persistence.
+- CLI orchestration for the deterministic pipeline.
 - RIM node, edge, and model contracts.
 - RIM JSON exporter.
 - Initial tests.
@@ -74,13 +75,16 @@
 - Reports include severity summaries and report-ready finding rows.
 - Reports can be rendered as deterministic Markdown.
 - Reports can be persisted as JSON and Markdown.
+- `rilde run` loads existing Graphify JSON, runs deterministic scanners,
+  derives environment and boundary candidates, annotates and exports the RIM,
+  runs leak detection, generates evidence, and writes JSON and Markdown report
+  artifacts.
 - A RIM can be exported as JSON.
-- Tests pass with `python -m pytest`: 68 passed.
+- Tests pass with `python -m pytest`: 71 passed.
 
 ## What Is Incomplete
 
 - Invoking the Graphify CLI directly.
-- CLI.
 
 ## Blockers
 

@@ -60,3 +60,10 @@
 - Added report specification documentation.
 - Added report tests.
 - Verified test suite with `python -m pytest`: 68 passed.
+- Added `rilde` console script entry point.
+- Added deterministic CLI pipeline orchestration with `rilde run`.
+- Added CLI artifact persistence for scanner findings, environment candidates,
+  boundary candidates, RIM JSON, leak findings, evidence records, report JSON,
+  and report Markdown.
+- Added CLI orchestration tests.
+- Verified test suite with `python -m pytest`: 71 passed.

@@ -10,7 +10,7 @@ CLI.
 
 ## Last Completed Task
 
-Report generation.
+CLI orchestration.
 
 ## Current Task
 
@@ -18,7 +18,7 @@ No active task.
 
 ## Next Task
 
-Implement CLI orchestration for the deterministic pipeline.
+Optional Graphify CLI invocation wrapper.
 
 ## Blockers
 
@@ -27,7 +27,7 @@ Implement CLI orchestration for the deterministic pipeline.
 
 ## Test Status
 
-Pass. `python -m pytest`: 68 passed.
+Pass. `python -m pytest`: 71 passed.
 
 ## Architecture Snapshot
 
@@ -52,6 +52,7 @@ Major modules:
   RIM nodes.
 - `reports`: deterministic structured, Markdown, and JSON report generation
   from evidence records.
+- `rilde_cli`: deterministic CLI orchestration and console entry point.
 
 Data flow:
 
@@ -67,6 +68,7 @@ Repository
   -> Leak Detection Engine
   -> Evidence Generation
   -> Reports
+  -> CLI Artifacts
 ```
 
 Contracts:
@@ -79,6 +81,7 @@ Contracts:
 - Evidence generation consumes leak findings plus the RIM and returns evidence
   records.
 - Report generation consumes evidence records and returns report outputs.
+- CLI orchestration composes the deterministic stages and persists artifacts.
 
 ## Important Decisions
 
@@ -93,7 +96,6 @@ Contracts:
 
 - Python target is 3.12+, but local test output currently shows Python 3.10.11.
 - Full-repo Ruff has existing findings outside the latest report work.
-- CLI is not implemented.
 - Graphify CLI invocation is still optional future work; current Graphify
   integration reads existing JSON output.
 
@@ -102,5 +104,5 @@ Contracts:
 The next engineer should start by executing:
 
 ```text
-Implement CLI orchestration for the deterministic pipeline.
+Optional Graphify CLI invocation wrapper.
 ```

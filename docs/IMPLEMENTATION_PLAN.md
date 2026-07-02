@@ -15,6 +15,7 @@ Complete deterministic repository intelligence foundations:
 - Evidence generation complete.
 - Report generation complete.
 - Scanner findings persistence complete.
+- CLI orchestration complete.
 - Tests and documentation updated.
 
 ## MVP Roadmap
@@ -32,7 +33,7 @@ Complete deterministic repository intelligence foundations:
 10. Leak detection policies. Complete.
 11. Evidence generation. Complete.
 12. Reports. Complete.
-13. CLI. Current next task.
+13. CLI. Complete.
 
 ## Future Sprints
 
@@ -40,7 +41,6 @@ Complete deterministic repository intelligence foundations:
 - JSON state persistence for every stage.
 - RIM validation CLI.
 - Leak detection traversal and policies.
-- CLI orchestration.
 
 ## Backlog
 

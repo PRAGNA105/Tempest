@@ -9,6 +9,9 @@ dependencies = [
     "pydantic>=2.7",
 ]
 
+[project.scripts]
+rilde = "rilde_cli.main:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.2",
@@ -32,4 +35,3 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
-

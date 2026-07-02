@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-02 (Session 7)
+
+### Added
+
+- Added `rilde` console script entry point.
+- Added `rilde run` deterministic pipeline orchestration.
+- Added reusable CLI pipeline orchestration that loads Graphify JSON, runs
+  scanners, derives environment and boundary candidates, annotates and exports
+  the RIM, runs leak detection, generates evidence, and writes report artifacts.
+- Added CLI orchestration tests (3 new tests).
+
 ## 2026-07-02 (Session 6)
 
 ### Added
