@@ -13,6 +13,8 @@
 - Secret scanner.
 - Database scanner.
 - Cloud resource scanner.
+- Environment discovery.
+- Production boundary discovery.
 - Scanner findings JSON persistence.
 - RIM node, edge, and model contracts.
 - RIM JSON exporter.
@@ -35,18 +37,23 @@
   Redis, SQL Server, JDBC URLs, and database host assignments.
 - Cloud resource findings can be detected for AWS, Azure, and GCP resource
   references.
+- Environment candidates can be derived from URL, database, and cloud resource
+  findings with evidence, confidence, and source finding metadata.
+- Production boundary candidates can be derived from production environment
+  candidates and scanner findings with externally reachable classification,
+  confidence, evidence, and source metadata.
 - Scanner findings can be persisted under `state/`.
 - Database findings are persisted under `state/database_findings.json`.
 - Cloud resource findings are persisted under `state/cloud_findings.json`.
+- Environment candidates are persisted under `state/environment_candidates.json`.
+- Boundary candidates are persisted under `state/boundary_candidates.json`.
 - A RIM can be built from graph nodes, graph edges, and scanner findings.
 - A RIM can be exported as JSON.
-- Tests pass with `python -m pytest`.
+- Tests pass with `python -m pytest`: 48 passed.
 
 ## What Is Incomplete
 
 - Invoking the Graphify CLI directly.
-- Environment discovery.
-- Production boundary discovery.
 - Graph annotation.
 - Leak detection.
 - Evidence generation.
@@ -54,4 +61,5 @@
 
 ## Blockers
 
-- `ruff` is not installed in the active Python environment.
+- Full-repo `python -m ruff check .` reports existing lint findings outside the
+  environment discovery files.

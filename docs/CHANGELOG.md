@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-07-02 (Session 2)
+
+### Added
+
+- Added production boundary discovery contracts and discovery logic.
+- Added production boundary candidate derivation from production environment
+  candidates with externally reachable classification.
+- Added boundary candidate JSON persistence.
+- Added production boundary discovery tests (11 new tests).
+
+## 2026-07-02
+
+
+### Added
+
+- Added deterministic environment discovery contracts.
+- Added environment candidate derivation from URL, database, and cloud resource
+  findings.
+- Added environment candidate JSON persistence and discovery script.
+- Added environment discovery tests.
+
 ## 2026-07-01
 
 ### Added

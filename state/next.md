@@ -1,8 +1,9 @@
 # Next
 
-Implement environment discovery in small steps:
+Implement graph annotation in small steps:
 
-1. Define environment discovery contracts.
-2. Derive environment candidates from URL, database, and cloud findings.
-3. Add confidence and evidence metadata for environment hints.
+1. Define annotation contracts (annotation types, annotated node model).
+2. Enrich RIM nodes with environment and boundary metadata.
+3. Link environment candidates and boundary candidates to their source graph
+   nodes via `belongs_to_environment` and `crosses_boundary` edges.
 4. Add tests and documentation.

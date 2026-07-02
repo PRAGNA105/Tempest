@@ -16,6 +16,7 @@ Repository
   -> Graphify Adapter
   -> Repository Graph
   -> Content Scanner
+  -> Environment Discovery
   -> RIM Export
 ```
 
@@ -44,7 +45,8 @@ Repository
   `GraphifyJsonAdapter`.
 - `scanners`: finding contracts for secrets, URLs, databases, and cloud
   resources.
-- `environment`: future environment classification.
+- `environment`: deterministic environment candidate discovery from scanner
+  findings.
 - `boundary`: future production boundary discovery.
 - `annotation`: future graph enrichment layer.
 - `rim`: canonical RIM models and JSON export.
@@ -60,6 +62,7 @@ Every stage exposes explicit inputs and outputs:
 | --- | --- | --- |
 | Graphify Adapter | Repository path | `RepositoryGraph` |
 | Content Scanner | Repository files | Scanner findings |
+| Environment Discovery | Scanner findings | Environment candidates |
 | RIM Export | `RepositoryGraph` plus findings | `rim.json` |
 | Leak Detection | RIM | Findings and evidence |
 

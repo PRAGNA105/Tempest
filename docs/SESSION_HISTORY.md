@@ -1,5 +1,47 @@
 # Session History
 
+## 2026-07-02 (Session 2)
+
+Completed production boundary discovery.
+
+Completed tasks:
+
+- Added production boundary discovery logic.
+- Derived boundary candidates from production environment candidates and scanner
+  findings.
+- Added externally reachable classification for URLs, databases, and cloud
+  resources.
+- Added confidence derivation, evidence propagation, and source metadata.
+- Added JSON persistence for boundary candidates.
+- Added 11 new tests covering all boundary types, reachability heuristics,
+  exclusion of non-production candidates, deduplication, missing findings,
+  confidence derivation, and JSON persistence.
+- Ran tests successfully: 48 passed (37 existing + 11 new).
+
+Next recommended task:
+
+- Graph annotation.
+
+## 2026-07-02
+
+
+Completed environment discovery.
+
+Completed tasks:
+
+- Added environment discovery contracts.
+- Derived environment candidates from URL, database, and cloud resource
+  findings.
+- Added confidence, evidence, and source finding metadata for environment
+  candidates.
+- Added JSON persistence for environment candidates.
+- Generated `state/environment_candidates.json`.
+- Ran tests successfully: 37 passed.
+
+Next recommended task:
+
+- Production boundary discovery.
+
 ## 2026-07-01
 
 Completed initial bootstrap from the project initialization prompt.

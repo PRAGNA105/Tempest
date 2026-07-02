@@ -17,11 +17,18 @@
 - Added secret scanner.
 - Added database scanner.
 - Added cloud resource scanner.
+- Added environment discovery.
 - Added scanner findings JSON persistence.
 - Generated `state/url_findings.json`.
 - Generated `state/secret_findings.json`.
 - Generated `state/database_findings.json`.
 - Generated `state/cloud_findings.json`.
+- Generated `state/environment_candidates.json`.
 - Added initial tests.
 - Added mandatory docs and state files.
-- Verified test suite with `python -m pytest`: 32 passed.
+- Verified test suite with `python -m pytest`: 37 passed.
+- Added production boundary discovery logic.
+- Added boundary candidate JSON persistence.
+- Generated `state/boundary_candidates.json`.
+- Added boundary discovery tests.
+- Verified test suite with `python -m pytest`: 48 passed.
